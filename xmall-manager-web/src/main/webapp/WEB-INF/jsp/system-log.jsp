@@ -155,7 +155,6 @@
         });
     }
 
-    /*订单-删除*/
     function log_del(obj,id){
         layer.confirm('确认要删除ID为\''+id+'\'的日志吗？',{icon:0},function(index){
             var index = layer.load(3);
@@ -209,6 +208,7 @@
                     layer.close(index);
                     if(data.success!=true){
                         layer.alert(data.message,{title: '错误信息',icon: 2});
+                        return;
                     }
                     layer.msg('已删除!',{icon:1,time:1000});
                     logCount();
